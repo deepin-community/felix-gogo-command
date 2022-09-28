@@ -1,0 +1,48 @@
+Source: felix-gogo-command
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Damien Raude-Morvan <drazzib@debian.org>
+Build-Depends: cdbs, debhelper (>= 9), default-jdk, maven-debian-helper
+Build-Depends-Indep: default-jdk-doc,
+                     junit4,
+                     libfelix-bundlerepository-java,
+                     libfelix-bundlerepository-java-doc,
+                     libfelix-gogo-runtime-java,
+                     libfelix-gogo-runtime-java-doc,
+                     libmaven-bundle-plugin-java,
+                     libmaven-javadoc-plugin-java,
+                     libosgi-compendium-java,
+                     libosgi-compendium-java-doc,
+                     libosgi-core-java (>= 4.3.0),
+                     libosgi-core-java-doc,
+                     libsurefire-java
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-java/felix-gogo-command.git
+Vcs-Browser: http://anonscm.debian.org/cgit/pkg-java/felix-gogo-command.git
+Homepage: http://felix.apache.org/site/apache-felix-gogo.html
+
+Package: libfelix-gogo-command-java
+Architecture: all
+Depends: ${maven:Depends}, ${misc:Depends}
+Recommends: ${maven:OptionalDepends}
+Suggests: libfelix-gogo-command-java-doc
+Description: Apache Felix Gogo Command bundle
+ Apache Felix Gogo is a subproject of Apache Felix implementing the OSGi
+ RFC 147, which describes a standard shell for OSGi-based environments.
+ .
+ Command bundle of Gogo subproject implements a set of basic commands.
+
+Package: libfelix-gogo-command-java-doc
+Architecture: all
+Section: doc
+Depends: ${maven:DocDepends}, ${misc:Depends}
+Recommends: ${maven:DocOptionalDepends}
+Suggests: libfelix-gogo-command-java
+Description: Documentation for Apache Felix Gogo Command bundle
+ Apache Felix Gogo is a subproject of Apache Felix implementing the OSGi
+ RFC 147, which describes a standard shell for OSGi-based environments.
+ .
+ Command bundle of Gogo subproject implements a set of basic commands.
+ .
+ This package contains the API documentation of libfelix-gogo-command-java.

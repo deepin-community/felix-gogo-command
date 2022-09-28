@@ -1,0 +1,5 @@
+
+org.apache.felix org.apache.felix.gogo.command bundle s/.*/debian/ * *
+org.apache.felix org.apache.felix.gogo.runtime bundle s/.*/debian/ * *
+s/org.apache.felix/org.osgi/ org.osgi.compendium * * * *
+s/org.apache.felix/org.osgi/ org.osgi.core * * * *
